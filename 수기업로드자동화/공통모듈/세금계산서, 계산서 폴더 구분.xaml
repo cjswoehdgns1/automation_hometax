@@ -1,4 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1110,1036" sap2010:WorkflowViewState.IdRef="Sequence_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" this:Sequence.s_savefileloot="C:\Users\LEE_DONGHUN03\Documents\UiPath\수기업로드자동화프로젝트_V3\수기업로드 엑셀자료" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="s_savefileloot" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1064,1310.4</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Sequence_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="29">
       <x:String>System.Activities</x:String>
@@ -62,43 +70,36 @@
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="1078,871" sap2010:WorkflowViewState.IdRef="Sequence_1">
-    <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="s_fileloot" />
-    </Sequence.Variables>
+  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="1074.4,1145.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="1036,60" sap2010:WorkflowViewState.IdRef="Assign_1">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[s_fileloot]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String">C:\Users\cjswo\OneDrive\문서\UiPath\수기업로드자동화프로젝트_V2\수기업로드 엑셀자료</InArgument>
-      </Assign.Value>
-    </Assign>
-    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1036,679" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Directory.GetFiles(s_fileloot)]">
+    <ui:Delete ContinueOnError="True" sap:VirtualizedContainerService.HintSize="1032.8,22.4" sap2010:WorkflowViewState.IdRef="Delete_1" Path="[s_savefileloot + &quot;\세금계산서&quot;]" />
+    <ui:Delete ContinueOnError="True" sap:VirtualizedContainerService.HintSize="1032.8,22.4" sap2010:WorkflowViewState.IdRef="Delete_2" Path="[s_savefileloot + &quot;\계산서&quot;]" />
+    <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="1032.8,80.8" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[s_savefileloot + &quot;\세금계산서&quot;]" />
+    <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="1032.8,80.8" sap2010:WorkflowViewState.IdRef="CreateDirectory_2" Path="[s_savefileloot + &quot;\계산서&quot;]" />
+    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1032.8,686.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Directory.GetFiles(s_savefileloot)]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1000,545" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="997.6,552" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[item.ToString.Contains(&quot;세금계산서&quot;)]" sap:VirtualizedContainerService.HintSize="958,453" sap2010:WorkflowViewState.IdRef="If_4">
+            <If Condition="[item.ToString.Contains(&quot;세금계산서&quot;)]" sap:VirtualizedContainerService.HintSize="956,459.2" sap2010:WorkflowViewState.IdRef="If_4">
               <If.Then>
-                <ui:MoveFile ContinueOnError="{x:Null}" Destination="[s_fileloot + &quot;\세금계산서&quot;]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="384,157" sap2010:WorkflowViewState.IdRef="MoveFile_4" Overwrite="True" Path="[item.ToString]" />
+                <ui:MoveFile ContinueOnError="{x:Null}" Destination="[s_savefileloot + &quot;\세금계산서&quot;]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="384,160" sap2010:WorkflowViewState.IdRef="MoveFile_4" Overwrite="True" Path="[item.ToString]" />
               </If.Then>
               <If.Else>
-                <If Condition="[item.ToString.Contains(&quot;계산서&quot;)]" sap:VirtualizedContainerService.HintSize="529,305" sap2010:WorkflowViewState.IdRef="If_3">
+                <If Condition="[item.ToString.Contains(&quot;계산서&quot;)]" sap:VirtualizedContainerService.HintSize="528,309.6" sap2010:WorkflowViewState.IdRef="If_3">
                   <If.Then>
-                    <ui:MoveFile ContinueOnError="{x:Null}" Destination="[s_fileloot + &quot;\계산서&quot;]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="384,157" sap2010:WorkflowViewState.IdRef="MoveFile_5" Overwrite="True" Path="[item.ToString]" />
+                    <ui:MoveFile ContinueOnError="{x:Null}" Destination="[s_savefileloot + &quot;\계산서&quot;]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="384,160" sap2010:WorkflowViewState.IdRef="MoveFile_5" Overwrite="True" Path="[item.ToString]" />
                   </If.Then>
                 </If>
               </If.Else>

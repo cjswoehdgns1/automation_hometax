@@ -1,8 +1,9 @@
 {
-  "name": "수기업로드자동화프로젝트_V1",
-  "description": "최초 버전",
+  "name": "수기업로드자동화프로젝트_V3",
+  "description": "공통 모듈화 진행",
   "main": "Main.xaml",
   "dependencies": {
+    "UiPath.Credentials.Activities": "[1.1.6479.13204]",
     "UiPath.Excel.Activities": "[2.9.3-beta.1188448]",
     "UiPath.Mail.Activities": "[1.9.3-beta.1189163]",
     "UiPath.System.Activities": "[20.10.1-beta.1189431]",
@@ -15,9 +16,7 @@
   "projectVersion": "1.0.0",
   "runtimeOptions": {
     "autoDispose": false,
-    "netFrameworkLazyLoading": false,
     "isPausable": true,
-    "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
     "excludedLoggedData": [
@@ -26,8 +25,7 @@
     ],
     "executionType": "Workflow",
     "readyForPiP": false,
-    "startsInPiP": false,
-    "mustRestoreAllDependencies": false
+    "startsInPiP": false
   },
   "designOptions": {
     "projectProfile": "Developement",
@@ -51,8 +49,7 @@
       "output": []
     }
   ],
-  "isTemplate": false,
+  "isTemplate": true,
   "templateProjectData": {},
-  "publishData": {},
-  "targetFramework": "Legacy"
+  "publishData": {}
 }
