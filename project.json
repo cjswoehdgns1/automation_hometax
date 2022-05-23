@@ -1,6 +1,6 @@
 {
-  "name": "수기업로드자동화프로젝트_V4",
-  "description": "s",
+  "name": "automation-for-hometax_V4",
+  "description": "전체파일 다운로드 추가",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Credentials.Activities": "[1.1.6479.13204]",
