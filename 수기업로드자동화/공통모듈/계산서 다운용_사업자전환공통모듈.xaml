@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1128,4871</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>896,614.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Sequence_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -79,34 +79,34 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="800,4706" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="349.6,310.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[DT_CRN]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="758,4614" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[DT_CRN]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="308,217.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="계산서 다운용_사업자전환공통모듈" sap:VirtualizedContainerService.HintSize="708,4466" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="계산서 다운용_사업자전환공통모듈" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[row.Item(&quot;계산서 수기업로드 진행여부&quot;).ToString=&quot;True&quot;]" sap:VirtualizedContainerService.HintSize="666,4374" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[row.Item(&quot;계산서 수기업로드 진행여부&quot;).ToString=&quot;True&quot;]" sap:VirtualizedContainerService.HintSize="664.8,4525.6" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="521,4226" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence sap:VirtualizedContainerService.HintSize="520.8,4376" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="479,116" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="pgup" KeyModifiers="None" SpecialKey="True">
+                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="479.2,117.6" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="pgup" KeyModifiers="None" SpecialKey="True">
                     <ui:SendHotkey.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="ce3014c9-3471-4b26-a78b-4d519b60aed6">
                         <ui:Target.TimeoutMS>
@@ -118,7 +118,7 @@
                       </ui:Target>
                     </ui:SendHotkey.Target>
                   </ui:SendHotkey>
-                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN  btnUserChg'" sap:VirtualizedContainerService.HintSize="479,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True" SimulateClick="False">
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN  btnUserChg'" sap:VirtualizedContainerService.HintSize="479.2,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True" SimulateClick="False">
                     <ui:Click.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -140,7 +140,19 @@
                       </ui:Target>
                     </ui:Click.Target>
                   </ui:Click>
-                  <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  input15'" sap:VirtualizedContainerService.HintSize="479,134" sap2010:WorkflowViewState.IdRef="SetValue_1" Text="[row.item(&quot;앞&quot;).ToString]">
+                  <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'INPUT  radio4_input_1'" sap:VirtualizedContainerService.HintSize="479.2,107.2" sap2010:WorkflowViewState.IdRef="Check_2">
+                    <ui:Check.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="02f154f3-508f-4938-a6e7-d91e6247489b" InformativeScreenshot="4fe8dffca4212c22b3c02bb04920946c" Selector="&lt;html app='chrome.exe' htmlwindowname='UTXPPAAA25' title='CmnPopup' /&gt;&lt;webctrl id='radio4_input_1' tag='INPUT' type='radio' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Check.Target>
+                  </ui:Check>
+                  <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  input15'" sap:VirtualizedContainerService.HintSize="479.2,135.2" sap2010:WorkflowViewState.IdRef="SetValue_1" Text="[row.item(&quot;앞&quot;).ToString]">
                     <ui:SetValue.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cd012d29-20ad-4443-b15e-cf719f451d83" InformativeScreenshot="90ec9beb83179a186969ef00b6ac8925" Selector="&lt;html app='chrome.exe' htmlwindowname='UTXPPAAA25' title='CmnPopup' /&gt;&lt;webctrl id='input15' tag='INPUT' type='text' /&gt;">
                         <ui:Target.TimeoutMS>
@@ -152,7 +164,7 @@
                       </ui:Target>
                     </ui:SetValue.Target>
                   </ui:SetValue>
-                  <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  input16'" sap:VirtualizedContainerService.HintSize="479,134" sap2010:WorkflowViewState.IdRef="SetValue_2" Text="[row.item(&quot;중간&quot;).ToString]">
+                  <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  input16'" sap:VirtualizedContainerService.HintSize="479.2,135.2" sap2010:WorkflowViewState.IdRef="SetValue_2" Text="[row.item(&quot;중간&quot;).ToString]">
                     <ui:SetValue.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0222e4ba-d56a-4570-bc26-6daa2c337b27" InformativeScreenshot="c4bcc8323b46a910ae9c987aaa130b92" Selector="&lt;html app='chrome.exe' htmlwindowname='UTXPPAAA25' title='CmnPopup' /&gt;&lt;webctrl id='input16' tag='INPUT' type='text' /&gt;">
                         <ui:Target.TimeoutMS>

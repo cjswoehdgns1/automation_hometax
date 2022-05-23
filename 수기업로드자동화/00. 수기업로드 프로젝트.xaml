@@ -330,13 +330,8 @@
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:CommentOut sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                             <ui:CommentOut.Body>
-                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,206.4" sap2010:WorkflowViewState.IdRef="Sequence_20">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 엑셀통합 workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_70" UnSafe="False" WorkflowFileName="엑셀통합.xaml">
+                              <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 엑셀통합 workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_70" UnSafe="False" WorkflowFileName="엑셀통합.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
                                     <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                   </ui:InvokeWorkflowFile.Arguments>
@@ -705,9 +700,7 @@
           </sap:WorkflowViewStateService.ViewState>
           <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="국세청 로그인" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="수기업로드자동화\01. 접속용.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="ss:SecureString" x:Key="s_pw">
-                <mva:VisualBasicValue x:TypeArguments="ss:SecureString" ExpressionText="s_pw" />
-              </InArgument>
+              <InArgument x:TypeArguments="ss:SecureString" x:Key="s_pw">[s_pw]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
