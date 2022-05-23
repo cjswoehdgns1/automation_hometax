@@ -5,10 +5,10 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>984,2512.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1224,2432</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="78">
+    <scg:List x:TypeArguments="x:String" Capacity="39">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -48,7 +48,6 @@
       <x:String>System.Runtime.InteropServices</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Security</x:String>
-      <x:String>System.Text.RegularExpressions</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -90,16 +89,16 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="01" sap:VirtualizedContainerService.HintSize="994.4,2308" sap2010:WorkflowViewState.IdRef="Sequence_23">
+  <Sequence DisplayName="01" sap:VirtualizedContainerService.HintSize="998,2267" sap2010:WorkflowViewState.IdRef="Sequence_23">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="952.8,2215.2" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="50">
+    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="956,2175" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="50">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
-          <Sequence sap:VirtualizedContainerService.HintSize="911.2,1948" sap2010:WorkflowViewState.IdRef="Sequence_21">
+          <Sequence sap:VirtualizedContainerService.HintSize="914,2001" sap2010:WorkflowViewState.IdRef="Sequence_21">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="VOS">
                 <Variable.Default>
@@ -117,21 +116,22 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:KillProcess Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="869.6,22.4" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="chrome" />
-            <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="869.6,1792.8" sap2010:WorkflowViewState.IdRef="OpenBrowser_5" NewSession="True" Private="False" Url="https://www.hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index.xml">
+            <ui:KillProcess Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="872,22" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="chrome" />
+            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="872,22" sap2010:WorkflowViewState.IdRef="Delay_10" />
+            <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="872,1785" sap2010:WorkflowViewState.IdRef="OpenBrowser_5" NewSession="True" Private="False" Url="https://www.hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index.xml">
               <ui:OpenBrowser.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                   </ActivityAction.Argument>
-                  <Sequence sap:VirtualizedContainerService.HintSize="836,1690.4" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                  <Sequence sap:VirtualizedContainerService.HintSize="838,1684" sap2010:WorkflowViewState.IdRef="Sequence_24">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="794.4,22.4" sap2010:WorkflowViewState.IdRef="MaximizeWindow_4" />
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="794.4,1535.2" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                    <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="796,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_4" />
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="796,1530" sap2010:WorkflowViewState.IdRef="Sequence_20">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:Boolean" Name="existTI" />
                       </Sequence.Variables>
@@ -140,7 +140,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'push button  닫기'" sap:VirtualizedContainerService.HintSize="752.8,107.2" sap2010:WorkflowViewState.IdRef="Click_39" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True">
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'push button  닫기'" sap:VirtualizedContainerService.HintSize="754,106" sap2010:WorkflowViewState.IdRef="Click_39" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True">
                         <ui:Click.CursorPosition>
                           <ui:CursorPosition Position="Center">
                             <ui:CursorPosition.OffsetX>
@@ -162,7 +162,7 @@
                           </ui:Target>
                         </ui:Click.Target>
                       </ui:Click>
-                      <ui:UiElementExists DisplayName="Element Exists 'A  group163207'" Exists="[existTI]" sap:VirtualizedContainerService.HintSize="752.8,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                      <ui:UiElementExists DisplayName="Element Exists 'A  group163207'" Exists="[existTI]" sap:VirtualizedContainerService.HintSize="754,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
                         <ui:UiElementExists.Target>
                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0e4a98e9-c1c2-4648-8060-d5542bd2aaba" InformativeScreenshot="cd5dfc2e2d1fb2ca90a8eacdf53b48e8" Selector="&lt;webctrl id='group163207' tag='A' /&gt;" TimeoutMS="2000">
                             <ui:Target.WaitForReady>
@@ -171,7 +171,7 @@
                           </ui:Target>
                         </ui:UiElementExists.Target>
                       </ui:UiElementExists>
-                      <If Condition="[existTI]" sap:VirtualizedContainerService.HintSize="752.8,1148" sap2010:WorkflowViewState.IdRef="If_2">
+                      <If Condition="[existTI]" sap:VirtualizedContainerService.HintSize="753.6,1146.4" sap2010:WorkflowViewState.IdRef="If_2">
                         <If.Then>
                           <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  group163207'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_33" KeyModifiers="None" MouseButton="BTN_LEFT">
                             <ui:Click.CursorPosition>
@@ -197,13 +197,13 @@
                           </ui:Click>
                         </If.Then>
                         <If.Else>
-                          <Sequence sap:VirtualizedContainerService.HintSize="375.2,998.4" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                          <Sequence sap:VirtualizedContainerService.HintSize="376,996.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN  textbox81212912'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_34" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True">
+                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN  textbox81212912'" sap:VirtualizedContainerService.HintSize="334.4,107.2" sap2010:WorkflowViewState.IdRef="Click_34" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True">
                               <ui:Click.CursorPosition>
                                 <ui:CursorPosition Position="Center">
                                   <ui:CursorPosition.OffsetX>
@@ -222,7 +222,7 @@
                                 </ui:Target>
                               </ui:Click.Target>
                             </ui:Click>
-                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  trigger38'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_40" KeyModifiers="None" MouseButton="BTN_LEFT">
+                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  trigger38'" sap:VirtualizedContainerService.HintSize="334.4,107.2" sap2010:WorkflowViewState.IdRef="Click_40" KeyModifiers="None" MouseButton="BTN_LEFT">
                               <ui:Click.CursorPosition>
                                 <ui:CursorPosition Position="Center">
                                   <ui:CursorPosition.OffsetX>
@@ -234,14 +234,14 @@
                                 </ui:CursorPosition>
                               </ui:Click.CursorPosition>
                               <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f6e0d793-f363-4569-bc6b-6201905bd3d1" InformativeScreenshot="c8ae950f21dc79dc9d158e6b20f2ab65" Selector="&lt;webctrl src='https://www.hometax.go.kr/websquare/websquare.wq?w2xPath=/ui/com*' tag='IFRAME' /&gt;&lt;webctrl id='group91882124' tag='A' /&gt;" TimeoutMS="5000">
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f6e0d793-f363-4569-bc6b-6201905bd3d1" InformativeScreenshot="11b83f18ffaf10878b9c418cc784cf78" Selector="&lt;webctrl src='https://www.hometax.go.kr/websquare/websquare.wq?w2xPath=/ui/com*' tag='IFRAME' /&gt;&lt;webctrl id='group91882124' tag='A' /&gt;" TimeoutMS="5000">
                                   <ui:Target.WaitForReady>
                                     <InArgument x:TypeArguments="ui:WaitForReady" />
                                   </ui:Target.WaitForReady>
                                 </ui:Target>
                               </ui:Click.Target>
                             </ui:Click>
-                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_44" KeyModifiers="None" MouseButton="BTN_LEFT">
+                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="334.4,107.2" sap2010:WorkflowViewState.IdRef="Click_44" KeyModifiers="None" MouseButton="BTN_LEFT">
                               <ui:Click.CursorPosition>
                                 <ui:CursorPosition Position="Center">
                                   <ui:CursorPosition.OffsetX>
@@ -253,7 +253,7 @@
                                 </ui:CursorPosition>
                               </ui:Click.CursorPosition>
                               <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6c6396a2-75e0-4dbe-a301-4dff2a184e87" InformativeScreenshot="0a9bfbb67bdbf74e09f149f457c0861e" Selector="&lt;webctrl src='https://www.hometax.go.kr/websquare/websquare.wq?w2xPath=/ui/com*' tag='IFRAME' /&gt;&lt;webctrl src='https://www.hometax.go.kr/NTSMagicLine4Web/ML4Web/Child.html?lgU*' tag='IFRAME' /&gt;&lt;webctrl aaname='(주)이랜드월드' parentid='row0dataTable' tag='SPAN' /&gt;">
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6c6396a2-75e0-4dbe-a301-4dff2a184e87" InformativeScreenshot="b32e9e42cd9274427e73ae721c4936c5" Selector="&lt;webctrl src='https://www.hometax.go.kr/websquare/websquare.wq?w2xPath=/ui/com*' tag='IFRAME' /&gt;&lt;webctrl src='https://www.hometax.go.kr/NTSMagicLine4Web/ML4Web/Child.html?lgU*' tag='IFRAME' /&gt;&lt;webctrl aaname='(주)이랜드월드' parentid='row0dataTable' tag='SPAN' /&gt;">
                                   <ui:Target.TimeoutMS>
                                     <InArgument x:TypeArguments="x:Int32" />
                                   </ui:Target.TimeoutMS>
@@ -263,7 +263,7 @@
                                 </ui:Target>
                               </ui:Click.Target>
                             </ui:Click>
-                            <ui:TypeSecureText AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Secure Text 'INPUT  input_cert_pw'" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="TypeSecureText_4" SecureText="[s_pw]">
+                            <ui:TypeSecureText AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Secure Text 'INPUT  input_cert_pw'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334.4,107.2" sap2010:WorkflowViewState.IdRef="TypeSecureText_4" SecureText="[s_pw]">
                               <ui:TypeSecureText.Target>
                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="dd51e880-33d5-4bb5-b1f0-1d96575af6e2" InformativeScreenshot="e0d918ce2d01bb972c428c0f2e87efbe" Selector="&lt;html app='chrome.exe' title='국세청 홈택스 - 로그인' /&gt;&lt;webctrl src='https://www.hometax.go.kr/websquare/websquare.wq?w2xPath=/ui/com*' tag='IFRAME' /&gt;&lt;webctrl src='https://www.hometax.go.kr/NTSMagicLine4Web/ML4Web/Child.html?lgU*' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='password' /&gt;" TimeoutMS="5000">
                                   <ui:Target.WaitForReady>
@@ -272,7 +272,7 @@
                                 </ui:Target>
                               </ui:TypeSecureText.Target>
                             </ui:TypeSecureText>
-                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON  btn_confirm_ifr...'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_42" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True">
+                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON  btn_confirm_ifr...'" sap:VirtualizedContainerService.HintSize="334.4,107.2" sap2010:WorkflowViewState.IdRef="Click_42" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True">
                               <ui:Click.CursorPosition>
                                 <ui:CursorPosition Position="Center">
                                   <ui:CursorPosition.OffsetX>
@@ -291,8 +291,8 @@
                                 </ui:Target>
                               </ui:Click.Target>
                             </ui:Click>
-                            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_9" />
-                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  group163207'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_38" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True">
+                            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_9" />
+                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  group163207'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_38" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True">
                               <ui:Click.CursorPosition>
                                 <ui:CursorPosition Position="Center">
                                   <ui:CursorPosition.OffsetX>
@@ -319,20 +319,7 @@
         </ActivityAction>
       </ui:RetryScope.ActivityBody>
       <ui:RetryScope.Condition>
-        <ActivityFunc x:TypeArguments="x:Boolean">
-          <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'SPAN  hdAnchorDep2'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
-            <ui:UiElementExists.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7ec9d99b-684c-45cd-a4ff-da3d6c0edfac" InformativeScreenshot="917a3f98419516dbc459544c76efc9f2" Selector="&lt;html app='chrome.exe' title='국세청 홈택스 - 전자세금계산서전용 &amp;gt; 건별발급' /&gt;&lt;webctrl id='hdAnchorDep2' tag='SPAN' /&gt;">
-                <ui:Target.TimeoutMS>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:Target.TimeoutMS>
-                <ui:Target.WaitForReady>
-                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                </ui:Target.WaitForReady>
-              </ui:Target>
-            </ui:UiElementExists.Target>
-          </ui:UiElementExists>
-        </ActivityFunc>
+        <ActivityFunc x:TypeArguments="x:Boolean" />
       </ui:RetryScope.Condition>
     </ui:RetryScope>
   </Sequence>

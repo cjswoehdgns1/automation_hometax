@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>624.8,2660.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>692,2700.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SAP_접속_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="64">
@@ -190,45 +190,20 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="435.2,107.2" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
-                      <ui:Click.CursorPosition>
-                        <ui:CursorPosition OffsetX="406" OffsetY="12" Position="TopLeft" />
-                      </ui:Click.CursorPosition>
-                      <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="220e6c3b-c76d-484e-ad9c-9344b5556ee2" InformativeScreenshot="634995b1beae79f2146af3c8c8b72ef0" Selector="&lt;wnd cls='TabWindowClass' title='F-LINK - SAP NetWeaver Portal - Internet Explorer' /&gt;&lt;wnd aaname='F-LINK - SAP NetWeaver Portal' cls='Internet Explorer_Server' /&gt;&lt;wnd cls='Afx:*' idx='1' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:Click.Target>
-                    </ui:Click>
-                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,278.4" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,278.4" sap2010:WorkflowViewState.IdRef="CommentOut_4">
                       <ui:CommentOut.Body>
-                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,200" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,200" sap2010:WorkflowViewState.IdRef="Sequence_28">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
                             <ui:Click.CursorPosition>
-                              <ui:CursorPosition Position="Center">
-                                <ui:CursorPosition.OffsetX>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:CursorPosition.OffsetX>
-                                <ui:CursorPosition.OffsetY>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:CursorPosition.OffsetY>
-                              </ui:CursorPosition>
+                              <ui:CursorPosition OffsetX="406" OffsetY="12" Position="TopLeft" />
                             </ui:Click.CursorPosition>
                             <ui:Click.Target>
-                              <ui:Target Element="{x:Null}" Id="220e6c3b-c76d-484e-ad9c-9344b5556ee2" InformativeScreenshot="6e87c7007ff3ab013afe61bf82fca708" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='F-LINK - SAP NetWeaver Portal - Internet Explorer' /&gt;&lt;wnd cls='TabWindowClass' title='F-LINK - SAP NetWeaver Portal - Internet Explorer' /&gt;&lt;wnd aaname='F-LINK - SAP NetWeaver Portal' cls='Internet Explorer_Server' /&gt;&lt;wnd cls='Afx:*' idx='1' /&gt;">
-                                <ui:Target.ClippingRegion>
-                                  <ui:Region Rectangle="401, 5, 12, 12" />
-                                </ui:Target.ClippingRegion>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="220e6c3b-c76d-484e-ad9c-9344b5556ee2" InformativeScreenshot="634995b1beae79f2146af3c8c8b72ef0" Selector="&lt;wnd cls='TabWindowClass' title='F-LINK - SAP NetWeaver Portal - Internet Explorer' /&gt;&lt;wnd aaname='F-LINK - SAP NetWeaver Portal' cls='Internet Explorer_Server' /&gt;&lt;wnd cls='Afx:*' idx='1' /&gt;">
                                 <ui:Target.TimeoutMS>
                                   <InArgument x:TypeArguments="x:Int32" />
                                 </ui:Target.TimeoutMS>
@@ -241,6 +216,31 @@
                         </Sequence>
                       </ui:CommentOut.Body>
                     </ui:CommentOut>
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="435.2,107.2" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target Element="{x:Null}" Id="220e6c3b-c76d-484e-ad9c-9344b5556ee2" InformativeScreenshot="716416242f79a6febf3357bad7ccc295" Selector="&lt;wnd cls='TabWindowClass' title='F-LINK - SAP NetWeaver Portal - Internet Explorer' /&gt;&lt;wnd cls='Internet Explorer_Server' /&gt;&lt;wnd cls='Afx:*' idx='1' /&gt;">
+                          <ui:Target.ClippingRegion>
+                            <ui:Region Rectangle="400, 3, 12, 16" />
+                          </ui:Target.ClippingRegion>
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Click.Target>
+                    </ui:Click>
                   </Sequence>
                 </ActivityAction>
               </ui:WindowScope.Body>

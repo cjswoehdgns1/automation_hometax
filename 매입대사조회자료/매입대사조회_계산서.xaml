@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="시퀀스" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="712,4185.6" sap2010:WorkflowViewState.IdRef="시퀀스_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="시퀀스" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="847.2,3924.8" sap2010:WorkflowViewState.IdRef="시퀀스_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
       <x:String>System.Activities</x:String>
@@ -69,7 +69,7 @@
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="시퀀스" sap:VirtualizedContainerService.HintSize="475.2,4020.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="시퀀스" sap:VirtualizedContainerService.HintSize="552,3760" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="s_firstsheet" />
       <Variable x:TypeArguments="x:String" Name="s_findcell" />
@@ -81,7 +81,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button  앞화면 (F3)'" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button  앞화면 (F3)'" sap:VirtualizedContainerService.HintSize="510.4,107.2" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -93,7 +93,7 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ea0115c3-7fe8-4095-b618-368b5462464b" InformativeScreenshot="6fe0cdf8bac1d732763cc16e7d14fba0" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='E-SERO 매입 대사 조회 - 계산서' /&gt;&lt;sap id='tbar[0]/btn[3]' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ea0115c3-7fe8-4095-b618-368b5462464b" InformativeScreenshot="6fe0cdf8bac1d732763cc16e7d14fba0" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='E-SERO 매입 대사 조회 - 세금계산서' /&gt;&lt;sap id='tbar[0]/btn[3]' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -103,43 +103,65 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="433.6,898.4" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="80465a21373900c504e541f7ac0b912c" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='E-SERO 매입 대사 조회' idx='*' /&gt;">
+    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="510.4,1240.8" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="80465a21373900c504e541f7ac0b912c" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='E-SERO 매입 대사 조회' idx='*' /&gt;">
       <ui:WindowScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,751.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476.8,1093.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'CTextField  발행일자'" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="SetValue_1" Text="[Today.ToString(&quot;yyyy.MM.01&quot;)]">
-              <ui:SetValue.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1590705b-6131-49c9-8430-e5e755269026" InformativeScreenshot="d2dc8ca2d14c703937965aafacbb40f3" Selector="&lt;sap id='usr/ctxtSO_CFDAT-LOW' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:SetValue.Target>
-            </ui:SetValue>
-            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'CTextField  발행일자'" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="SetValue_2" Text="[Now.AddMonths(+1).AddDays(-Now.Day).ToString(&quot;yyyy.MM.dd&quot;)]">
-              <ui:SetValue.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1590705b-6131-49c9-8430-e5e755269026" InformativeScreenshot="5b7cf4e9adc81d3db573365490be5093" Selector="&lt;sap id='usr/ctxtSO_CFDAT-HIGH' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:SetValue.Target>
-            </ui:SetValue>
-            <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'RadioButton  계산서'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Check_2">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,306.4" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,228" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'CTextField  발행일자'" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="SetValue_1" Text="[Today.ToString(&quot;yyyy.MM.01&quot;)]">
+                    <ui:SetValue.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1590705b-6131-49c9-8430-e5e755269026" InformativeScreenshot="d2dc8ca2d14c703937965aafacbb40f3" Selector="&lt;sap id='usr/ctxtSO_CFDAT-LOW' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:SetValue.Target>
+                  </ui:SetValue>
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,306.4" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,228" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'CTextField  발행일자'" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="SetValue_2" Text="[Now.AddMonths(+1).AddDays(-Now.Day).ToString(&quot;yyyy.MM.dd&quot;)]">
+                    <ui:SetValue.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1590705b-6131-49c9-8430-e5e755269026" InformativeScreenshot="5b7cf4e9adc81d3db573365490be5093" Selector="&lt;sap id='usr/ctxtSO_CFDAT-HIGH' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:SetValue.Target>
+                  </ui:SetValue>
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+            <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'RadioButton  계산서'" sap:VirtualizedContainerService.HintSize="435.2,107.2" sap2010:WorkflowViewState.IdRef="Check_2">
               <ui:Check.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e4a4ff2b-98b4-4204-a43f-11548c39a464" InformativeScreenshot="8125e60ff4d38489775f567d1d786f8f" Selector="&lt;sap id='usr/radRD_WOK02' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -151,7 +173,7 @@
                 </ui:Target>
               </ui:Check.Target>
             </ui:Check>
-            <ucas:ClickToolbarButton ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Click Toolbar Button 'Button  실행 (F8)'" sap:VirtualizedContainerService.HintSize="333.6,160.8" sap2010:WorkflowViewState.IdRef="ClickToolbarButton_1" Item="실행   (F8)">
+            <ucas:ClickToolbarButton ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Click Toolbar Button 'Button  실행 (F8)'" sap:VirtualizedContainerService.HintSize="435.2,160.8" sap2010:WorkflowViewState.IdRef="ClickToolbarButton_1" Item="실행   (F8)">
               <ucas:ClickToolbarButton.Items>
                 <scg:List x:TypeArguments="x:String" Capacity="4">
                   <x:String xml:space="preserve">실행   (F8)</x:String>
@@ -173,39 +195,7 @@
         </ActivityAction>
       </ui:WindowScope.Body>
     </ui:WindowScope>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="433.6,615.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="매입대사조회_세금계산서.xls">
-      <ui:ExcelApplicationScope.Body>
-        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,505.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelGetWorkbookSheet DisplayName="Get Workbook Sheet" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="ExcelGetWorkbookSheet_1" Index="0" Sheet="[s_firstsheet]" />
-            <ui:ExcelInsertDeleteColumns DisplayName="Insert/Delete Columns" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="ExcelInsertDeleteColumns_1" Mode="Remove" NoColumns="20" Position="7" SheetName="[s_firstsheet]" />
-            <ui:ExcelLookUpRange Range="{x:Null}" DisplayName="LookUp Range" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelLookUpRange_1" Result="[s_findcell]" SheetName="[s_firstsheet]" Value="사업장" />
-            <ui:ExcelReadRange AddHeaders="True" DataTable="[DT_extract]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="[s_findcell]" SheetName="[s_firstsheet]" />
-            <ui:FilterDataTable DataTable="[DT_extract]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[DT_extract_modify]" SelectColumnsMode="Keep">
-              <ui:FilterDataTable.Filters>
-                <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-                  <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="EMPTY" />
-                </scg:List>
-              </ui:FilterDataTable.Filters>
-              <ui:FilterDataTable.SelectColumns>
-                <scg:List x:TypeArguments="InArgument" Capacity="4">
-                  <x:Null />
-                </scg:List>
-              </ui:FilterDataTable.SelectColumns>
-            </ui:FilterDataTable>
-          </Sequence>
-        </ActivityAction>
-      </ui:ExcelApplicationScope.Body>
-    </ui:ExcelApplicationScope>
-    <Sequence sap:VirtualizedContainerService.HintSize="433.6,1139.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
+    <Sequence sap:VirtualizedContainerService.HintSize="510.4,1191.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -226,12 +216,10 @@
           </ui:Target>
         </ui:Click.Target>
       </ui:Click>
-      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'GridViewCell  shell'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT">
-        <ui:Click.CursorPosition>
-          <ui:CursorPosition OffsetX="59" OffsetY="12" Position="TopLeft" />
-        </ui:Click.CursorPosition>
-        <ui:Click.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9e1a6230-e1fe-4d69-aa13-6b8f40ca0def" InformativeScreenshot="fb37ec980265283af07bbd78b4047884" Selector="&lt;wnd aaname='컨텍스트' app='saplogon.exe' cls='#32768' /&gt;&lt;ctrl name='컨텍스트' role='popup menu' /&gt;&lt;ctrl automationid='3' /&gt;">
+      <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into" sap:VirtualizedContainerService.HintSize="333.6,96.8" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="%[k(down)k(down)k(down)k(enter)]">
+        <ui:TypeInto.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="a2218380-60e0-4dac-ac71-9c3498fdaebf">
             <ui:Target.TimeoutMS>
               <InArgument x:TypeArguments="x:Int32" />
             </ui:Target.TimeoutMS>
@@ -239,8 +227,8 @@
               <InArgument x:TypeArguments="ui:WaitForReady" />
             </ui:Target.WaitForReady>
           </ui:Target>
-        </ui:Click.Target>
-      </ui:Click>
+        </ui:TypeInto.Target>
+      </ui:TypeInto>
       <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'RadioButton  스프레드시트'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Check_3">
         <ui:Check.Target>
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="645d3c01-e254-40e3-88ac-c338613eb958" InformativeScreenshot="ae1ddccddadd44bb234712133ae76b74" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='파일에 리스트 저장...' idx='*' /&gt;&lt;sap id='usr/subSUBSCREEN_STEPLOOP:SAPLSPO5:0150/sub:SAPLSPO5:0150/radSPOPLI-SELFLAG[1,0]' /&gt;">
@@ -268,7 +256,7 @@
           </ui:Target>
         </ui:Click.Target>
       </ui:Click>
-      <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'CTextField  디렉토리'" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="SetValue_5" Text="C:\Users\LEE_DONGHUN03\Documents\UiPath\수기업로드자동화프로젝트_V2">
+      <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'CTextField  디렉토리'" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="SetValue_5" Text="C:\Users\LEE_DONGHUN03\Documents\rawdata">
         <ui:SetValue.Target>
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2bfaadd6-b7fc-4a59-9475-7e5b804cdb47" InformativeScreenshot="70063c502fc63291c665eeb52eb41e8c" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='E-SERO 매입 대사 조회 - 계산서' idx='*' /&gt;&lt;sap id='usr/ctxtDY_PATH' /&gt;">
             <ui:Target.TimeoutMS>
@@ -315,7 +303,7 @@
         </ui:Click.Target>
       </ui:Click>
     </Sequence>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="433.6,615.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="매입대사조회_계산서.xls">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="510.4,615.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="..\..\rawdata\매입대사조회_계산서.xls">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
@@ -347,7 +335,7 @@
         </ActivityAction>
       </ui:ExcelApplicationScope.Body>
     </ui:ExcelApplicationScope>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="433.6,352.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="수기업로드 자동화 엑셀판.xlsx">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="510.4,352.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="수기업로드 자동화 엑셀판.xlsm">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>

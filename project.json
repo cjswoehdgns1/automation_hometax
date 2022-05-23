@@ -1,8 +1,10 @@
 {
-  "name": "automation-for-hometax_V4",
-  "description": "전체파일 다운로드 추가",
+  "name": "automation_hometax_V5",
+  "description": "common module",
   "main": "Main.xaml",
   "dependencies": {
+    "BalaReva.ZipUnzip.Activities": "[2020.4.2]",
+    "Microsoft.Activities.Extensions": "[2.0.6.9]",
     "UiPath.Credentials.Activities": "[1.1.6479.13204]",
     "UiPath.Excel.Activities": "[2.9.3-beta.1188448]",
     "UiPath.Mail.Activities": "[1.9.3-beta.1189163]",
