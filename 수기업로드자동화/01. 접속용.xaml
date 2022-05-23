@@ -214,7 +214,7 @@
                                 </ui:CursorPosition>
                               </ui:Click.CursorPosition>
                               <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2e418610-f607-4e37-aab4-6d9ec8cac52e" InformativeScreenshot="96d16f4e512945c1ddf647f77965a787" Selector="&lt;webctrl id='textbox81212912' tag='SPAN' /&gt;" TimeoutMS="5000">
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2e418610-f607-4e37-aab4-6d9ec8cac52e" InformativeScreenshot="e301a6671bd4ad653ac1118785577f4e" Selector="&lt;webctrl id='textbox81212912' tag='SPAN' /&gt;" TimeoutMS="5000">
                                   <ui:Target.WaitForReady>
                                     <InArgument x:TypeArguments="ui:WaitForReady" />
                                   </ui:Target.WaitForReady>
@@ -233,7 +233,7 @@
                                 </ui:CursorPosition>
                               </ui:Click.CursorPosition>
                               <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f6e0d793-f363-4569-bc6b-6201905bd3d1" InformativeScreenshot="0df8c281a15c4dd5d219f4ff8262dc11" Selector="&lt;webctrl src='https://www.hometax.go.kr/websquare/websquare.wq?w2xPath=/ui/com*' tag='IFRAME' /&gt;&lt;webctrl id='trigger38' tag='INPUT' type='button' /&gt;" TimeoutMS="5000">
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f6e0d793-f363-4569-bc6b-6201905bd3d1" InformativeScreenshot="0df8c281a15c4dd5d219f4ff8262dc11" Selector="&lt;webctrl src='https://www.hometax.go.kr/websquare/websquare.wq?w2xPath=/ui/com*' tag='IFRAME' /&gt;&lt;webctrl id='group91882124' tag='A' /&gt;" TimeoutMS="5000">
                                   <ui:Target.WaitForReady>
                                     <InArgument x:TypeArguments="ui:WaitForReady" />
                                   </ui:Target.WaitForReady>
@@ -252,7 +252,7 @@
                                 </ui:CursorPosition>
                               </ui:Click.CursorPosition>
                               <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6c6396a2-75e0-4dbe-a301-4dff2a184e87" InformativeScreenshot="4e051ffcaa934c5e8905432a0bd8ec07" Selector="&lt;webctrl src='https://www.hometax.go.kr/websquare/websquare.wq?w2xPath=/ui/com*' tag='IFRAME' /&gt;&lt;webctrl src='https://www.hometax.go.kr/NTSMagicLine4Web/ML4Web/Child.html?lgU*' tag='IFRAME' /&gt;&lt;webctrl aaname='(주)이랜드월드' parentid='row0dataTable' tag='SPAN' /&gt;" TimeoutMS="5000">
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6c6396a2-75e0-4dbe-a301-4dff2a184e87" InformativeScreenshot="7f5fe0d06b44baf8206de0809e4b64c9" Selector="&lt;webctrl src='https://www.hometax.go.kr/websquare/websquare.wq?w2xPath=/ui/com*' tag='IFRAME' /&gt;&lt;webctrl src='https://www.hometax.go.kr/NTSMagicLine4Web/ML4Web/Child.html?lgU*' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl idx='1' tag='TD' /&gt;" TimeoutMS="5000">
                                   <ui:Target.WaitForReady>
                                     <InArgument x:TypeArguments="ui:WaitForReady" />
                                   </ui:Target.WaitForReady>
