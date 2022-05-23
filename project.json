@@ -1,15 +1,15 @@
 {
-  "name": "automation_hometax_V5",
-  "description": "common module",
+  "name": "automation_hometax_fashion",
+  "description": "국세청 매입자료 다운로드 및 sap 업로드",
   "main": "Main.xaml",
   "dependencies": {
-    "BalaReva.ZipUnzip.Activities": "[2020.4.2]",
     "Microsoft.Activities.Extensions": "[2.0.6.9]",
+    "sap.click": "[1.0.3]",
     "UiPath.Credentials.Activities": "[1.1.6479.13204]",
-    "UiPath.Excel.Activities": "[2.9.3-beta.1188448]",
-    "UiPath.Mail.Activities": "[1.9.3-beta.1189163]",
-    "UiPath.System.Activities": "[20.10.1-beta.1189431]",
-    "UiPath.UIAutomation.Activities": "[20.10.4-preview]"
+    "UiPath.Excel.Activities": "[2.9.3]",
+    "UiPath.Mail.Activities": "[1.9.3]",
+    "UiPath.System.Activities": "[20.10.1]",
+    "UiPath.UIAutomation.Activities": "[20.10.6]"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -46,7 +46,7 @@
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "54b54392-125d-4de3-9e7d-6338fce6e6b6",
+      "uniqueId": "841c29a6-5c1d-457c-8fe7-5686b5bcf476",
       "input": [],
       "output": []
     }

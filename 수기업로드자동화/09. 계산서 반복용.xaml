@@ -1,9 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
 <Activity mc:Ignorable="sap sap2010" x:Class="시퀀스" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="s_range" Type="InOutArgument(x:String)" />
     <x:Property Name="s_excelfileroot" Type="InOutArgument(x:String)" />
     <x:Property Name="s_configroot" Type="InArgument(x:String)" />
+    <x:Property Name="s_period" Type="InOutArgument(x:String)" />
+    <x:Property Name="s_distinguishedperiod" Type="InOutArgument(x:String)" />
+    <x:Property Name="s_year" Type="InOutArgument(x:String)" />
+    <x:Property Name="DT_main" Type="InOutArgument(sd:DataTable)" />
   </x:Members>
   <this:시퀀스.s_configroot>
     <InArgument x:TypeArguments="x:String" />
@@ -11,7 +13,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1261,4255</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1208,3275</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>시퀀스_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="30">
@@ -84,11 +86,10 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="09" sap:VirtualizedContainerService.HintSize="1271,4090" sap2010:WorkflowViewState.IdRef="Sequence_38">
+  <Sequence DisplayName="09" sap:VirtualizedContainerService.HintSize="1142,3210" sap2010:WorkflowViewState.IdRef="Sequence_38">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="s_Tax" />
       <Variable x:TypeArguments="x:String" Name="s_VOS" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dt_POB" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_hometaxdata" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -96,31 +97,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1229,322" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_34" InstanceCachePeriod="3000" WorkbookPath="[s_excelfileroot]">
-      <ui:ExcelApplicationScope.Body>
-        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="376,213" sap2010:WorkflowViewState.IdRef="Sequence_96">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelDeleteRange DisplayName="Delete Range" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_4" Range="E3:H200" SheetName="국세청 금액" ShiftCells="False" ShiftOption="ShiftUp" />
-            <ui:ExcelReadRange AddHeaders="True" DataTable="[dt_POB]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_21" Range="[s_range]" SheetName="사업장" />
-          </Sequence>
-        </ActivityAction>
-      </ui:ExcelApplicationScope.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:ExcelApplicationScope>
-    <ui:BuildDataTable DataTable="[DT_hometaxdata]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="1229,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_6" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;사업장&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;공급가액&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;세액&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;건수&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+    <ui:BuildDataTable DataTable="[DT_hometaxdata]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="1100,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_6" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;사업장&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;공급가액&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;세액&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;건수&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -128,47 +105,59 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:BuildDataTable>
-    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dt_POB]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1229,2990" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[DT_main]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1100,2472" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1179,2842" sap2010:WorkflowViewState.IdRef="Sequence_91">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1050,2324" sap2010:WorkflowViewState.IdRef="Sequence_91">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1137,2750" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1008,2232" sap2010:WorkflowViewState.IdRef="TryCatch_4">
               <TryCatch.Try>
-                <Sequence sap:VirtualizedContainerService.HintSize="421,356" sap2010:WorkflowViewState.IdRef="Sequence_97">
+                <Sequence DisplayName="사업자 조회정보 없을 시 Then" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_100">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="s_stateofPOB" />
+                  </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 사업자전환공통모듈 workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="수기업로드자동화\공통모듈\사업자전환공통모듈.xaml">
+                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 사업자전환공통모듈 workflow" sap:VirtualizedContainerService.HintSize="623,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="공통모듈\사업자전환공통모듈.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="sd:DataTable" x:Key="dt_POB">[dt_POB]</InArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="s_front">[row.item("앞").Tostring]</InArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="s_mid">[row.item("중간").Tostring]</InArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="s_end">[row.item("뒤").Tostring]</InArgument>
+                      <InArgument x:TypeArguments="sd:DataTable" x:Key="DT_main">[DT_main]</InArgument>
+                      <OutArgument x:TypeArguments="x:String" x:Key="s_stateofPOB">[s_stateofPOB]</OutArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
-                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 사업자전환공통모듈_금액스크래핑 workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="수기업로드자동화\공통모듈\사업자전환공통모듈_금액스크래핑.xaml">
-                    <ui:InvokeWorkflowFile.Arguments>
-                      <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dt_hometaxdata">[dt_hometaxdata]</InOutArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="s_POB">[row.Item("사업장").ToString]</InArgument>
-                    </ui:InvokeWorkflowFile.Arguments>
-                  </ui:InvokeWorkflowFile>
+                  <If Condition="[s_stateofPOB = &quot;사업자 조회정보 없음&quot;]" sap:VirtualizedContainerService.HintSize="623,260" sap2010:WorkflowViewState.IdRef="If_4">
+                    <If.Then>
+                      <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{row.Item(&quot;사업장&quot;).ToString, s_stateofPOB, s_stateofPOB, s_stateofPOB}]" DataTable="[DT_hometaxdata]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                    </If.Then>
+                    <If.Else>
+                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 사업자전환공통모듈_금액스크래핑 workflow" sap:VirtualizedContainerService.HintSize="378,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="공통모듈\사업자전환공통모듈_금액스크래핑.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dt_hometaxdata">[dt_hometaxdata]</InOutArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="s_POB">[row.Item("사업장").ToString]</InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                    </If.Else>
+                  </If>
                 </Sequence>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1103,1764" sap2010:WorkflowViewState.IdRef="Catch`1_7">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="974,1474" sap2010:WorkflowViewState.IdRef="Catch`1_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -176,16 +165,16 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                     </ActivityAction.Argument>
-                    <Sequence sap:VirtualizedContainerService.HintSize="1097,1695" sap2010:WorkflowViewState.IdRef="Sequence_88">
+                    <Sequence sap:VirtualizedContainerService.HintSize="968,1405" sap2010:WorkflowViewState.IdRef="Sequence_88">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1055,1603" sap2010:WorkflowViewState.IdRef="RetryScope_4" NumberOfRetries="50">
+                      <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="926,1313" sap2010:WorkflowViewState.IdRef="RetryScope_4" NumberOfRetries="50">
                         <ui:RetryScope.ActivityBody>
                           <ActivityAction>
-                            <Sequence DisplayName="오류 o" sap:VirtualizedContainerService.HintSize="1013,1429" sap2010:WorkflowViewState.IdRef="Sequence_87">
+                            <Sequence DisplayName="오류 o" sap:VirtualizedContainerService.HintSize="884,1139" sap2010:WorkflowViewState.IdRef="Sequence_87">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:Boolean" Name="b_gotohome" />
                               </Sequence.Variables>
@@ -195,7 +184,7 @@
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:UiElementExists DisplayName="Element Exists" Exists="[b_gotohome]" sap:VirtualizedContainerService.HintSize="971,106" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
+                              <ui:UiElementExists DisplayName="Element Exists" Exists="[b_gotohome]" sap:VirtualizedContainerService.HintSize="842,106" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
                                 <ui:UiElementExists.Target>
                                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8dc960e2-78a0-4be6-84a3-804ee0b563f5" InformativeScreenshot="f861ba5fb356e60b0377804dc1a3ad1b" Selector="&lt;html app='chrome.exe' title='국세청 홈택스 - 전자세금계산서전용 &amp;gt; 월/분기별 목록조회' /&gt;&lt;webctrl src='https://teet.hometax.go.kr/websquare/websquare.html?w2xPath=/ui/*' tag='IFRAME' /&gt;&lt;webctrl aaname='홈으로 이동' tag='A' /&gt;" TimeoutMS="5000">
                                     <ui:Target.WaitForReady>
@@ -204,15 +193,15 @@
                                   </ui:Target>
                                 </ui:UiElementExists.Target>
                               </ui:UiElementExists>
-                              <If Condition="[b_gotohome]" sap:VirtualizedContainerService.HintSize="971,1191" sap2010:WorkflowViewState.IdRef="If_3">
+                              <If Condition="[b_gotohome]" sap:VirtualizedContainerService.HintSize="842,901" sap2010:WorkflowViewState.IdRef="If_3">
                                 <If.Then>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="463,1044" sap2010:WorkflowViewState.IdRef="Sequence_84">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="421,754" sap2010:WorkflowViewState.IdRef="Sequence_84">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  javascript:fn_movePo...'" sap:VirtualizedContainerService.HintSize="421,106" sap2010:WorkflowViewState.IdRef="Click_49" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  javascript:fn_movePo...'" sap:VirtualizedContainerService.HintSize="379,106" sap2010:WorkflowViewState.IdRef="Click_49" KeyModifiers="None" MouseButton="BTN_LEFT">
                                       <ui:Click.CursorPosition>
                                         <ui:CursorPosition Position="Center">
                                           <ui:CursorPosition.OffsetX>
@@ -234,7 +223,7 @@
                                         </ui:Target>
                                       </ui:Click.Target>
                                     </ui:Click>
-                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  group163207'" sap:VirtualizedContainerService.HintSize="421,106" sap2010:WorkflowViewState.IdRef="Click_50" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  group163207'" sap:VirtualizedContainerService.HintSize="379,106" sap2010:WorkflowViewState.IdRef="Click_50" KeyModifiers="None" MouseButton="BTN_LEFT">
                                       <ui:Click.CursorPosition>
                                         <ui:CursorPosition Position="Center">
                                           <ui:CursorPosition.OffsetX>
@@ -256,71 +245,97 @@
                                         </ui:Target>
                                       </ui:Click.Target>
                                     </ui:Click>
-                                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 02. 드롭다운리스트 선택 workflow" sap:VirtualizedContainerService.HintSize="421,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="수기업로드자동화\02. 드롭다운리스트 선택.xaml">
+                                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 02. 드롭다운리스트 선택 workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="공통모듈\드롭다운리스트 선택(월,분기별 목록조회).xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
-                                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 07. 15. 계산서 선택용 workflow" sap:VirtualizedContainerService.HintSize="421,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="수기업로드자동화\공통모듈\07. 15. 계산서 선택용.xaml">
+                                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 07. 15. 계산서 선택용 workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="공통모듈\07. 15. 계산서 선택용.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
-                                        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                        <InOutArgument x:TypeArguments="x:String" x:Key="s_period">[s_period]</InOutArgument>
+                                        <InOutArgument x:TypeArguments="x:String" x:Key="s_distinguishedperiod">[s_distinguishedperiod]</InOutArgument>
+                                        <InOutArgument x:TypeArguments="x:String" x:Key="s_year">[s_year]</InOutArgument>
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
-                                    <Sequence sap:VirtualizedContainerService.HintSize="421,356" sap2010:WorkflowViewState.IdRef="Sequence_98">
+                                    <Sequence DisplayName="사업자 조회정보 없을 시 Then" sap:VirtualizedContainerService.HintSize="379,66" sap2010:WorkflowViewState.IdRef="Sequence_102">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="x:String" Name="s_stateofPOB" />
+                                      </Sequence.Variables>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 사업자전환공통모듈 workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="수기업로드자동화\공통모듈\사업자전환공통모듈.xaml">
+                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 사업자전환공통모듈 workflow" sap:VirtualizedContainerService.HintSize="623,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="공통모듈\사업자전환공통모듈.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
-                                          <InArgument x:TypeArguments="sd:DataTable" x:Key="dt_POB">[dt_POB]</InArgument>
                                           <InArgument x:TypeArguments="x:String" x:Key="s_front">[row.item("앞").Tostring]</InArgument>
                                           <InArgument x:TypeArguments="x:String" x:Key="s_mid">[row.item("중간").Tostring]</InArgument>
                                           <InArgument x:TypeArguments="x:String" x:Key="s_end">[row.item("뒤").Tostring]</InArgument>
+                                          <InArgument x:TypeArguments="sd:DataTable" x:Key="DT_main">[DT_main]</InArgument>
+                                          <OutArgument x:TypeArguments="x:String" x:Key="s_stateofPOB">[s_stateofPOB]</OutArgument>
                                         </ui:InvokeWorkflowFile.Arguments>
                                       </ui:InvokeWorkflowFile>
-                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 사업자전환공통모듈_금액스크래핑 workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="수기업로드자동화\공통모듈\사업자전환공통모듈_금액스크래핑.xaml">
-                                        <ui:InvokeWorkflowFile.Arguments>
-                                          <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dt_hometaxdata">[dt_hometaxdata]</InOutArgument>
-                                          <InArgument x:TypeArguments="x:String" x:Key="s_POB">[row.Item("사업장").ToString]</InArgument>
-                                        </ui:InvokeWorkflowFile.Arguments>
-                                      </ui:InvokeWorkflowFile>
+                                      <If Condition="[s_stateofPOB = &quot;사업자 조회정보 없음&quot;]" sap:VirtualizedContainerService.HintSize="623,260" sap2010:WorkflowViewState.IdRef="If_6">
+                                        <If.Then>
+                                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{row.Item(&quot;사업장&quot;).ToString, s_stateofPOB, s_stateofPOB, s_stateofPOB}]" DataTable="[DT_hometaxdata]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
+                                        </If.Then>
+                                        <If.Else>
+                                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 사업자전환공통모듈_금액스크래핑 workflow" sap:VirtualizedContainerService.HintSize="378,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_27" UnSafe="False" WorkflowFileName="공통모듈\사업자전환공통모듈_금액스크래핑.xaml">
+                                            <ui:InvokeWorkflowFile.Arguments>
+                                              <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dt_hometaxdata">[dt_hometaxdata]</InOutArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="s_POB">[row.Item("사업장").ToString]</InArgument>
+                                            </ui:InvokeWorkflowFile.Arguments>
+                                          </ui:InvokeWorkflowFile>
+                                        </If.Else>
+                                      </If>
                                     </Sequence>
                                   </Sequence>
                                 </If.Then>
                                 <If.Else>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="463,600" sap2010:WorkflowViewState.IdRef="Sequence_86">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="376,310" sap2010:WorkflowViewState.IdRef="Sequence_86">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 사업자전환오류공통모듈 workflow" sap:VirtualizedContainerService.HintSize="421,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="수기업로드자동화\공통모듈\사업자전환공통모듈_오류.xaml">
+                                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 사업자전환오류공통모듈 workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="공통모듈\사업자전환공통모듈_오류.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
-                                    <Sequence sap:VirtualizedContainerService.HintSize="421,356" sap2010:WorkflowViewState.IdRef="Sequence_99">
+                                    <Sequence DisplayName="사업자 조회정보 없을 시 Then" sap:VirtualizedContainerService.HintSize="334,66" sap2010:WorkflowViewState.IdRef="Sequence_101">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="x:String" Name="s_stateofPOB" />
+                                      </Sequence.Variables>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 사업자전환공통모듈 workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="수기업로드자동화\공통모듈\사업자전환공통모듈.xaml">
+                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 사업자전환공통모듈 workflow" sap:VirtualizedContainerService.HintSize="623,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="공통모듈\사업자전환공통모듈.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
-                                          <InArgument x:TypeArguments="sd:DataTable" x:Key="dt_POB">[dt_POB]</InArgument>
                                           <InArgument x:TypeArguments="x:String" x:Key="s_front">[row.item("앞").Tostring]</InArgument>
                                           <InArgument x:TypeArguments="x:String" x:Key="s_mid">[row.item("중간").Tostring]</InArgument>
                                           <InArgument x:TypeArguments="x:String" x:Key="s_end">[row.item("뒤").Tostring]</InArgument>
+                                          <InArgument x:TypeArguments="sd:DataTable" x:Key="DT_main">[DT_main]</InArgument>
+                                          <OutArgument x:TypeArguments="x:String" x:Key="s_stateofPOB">[s_stateofPOB]</OutArgument>
                                         </ui:InvokeWorkflowFile.Arguments>
                                       </ui:InvokeWorkflowFile>
-                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 사업자전환공통모듈_금액스크래핑 workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="수기업로드자동화\공통모듈\사업자전환공통모듈_금액스크래핑.xaml">
-                                        <ui:InvokeWorkflowFile.Arguments>
-                                          <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dt_hometaxdata">[dt_hometaxdata]</InOutArgument>
-                                          <InArgument x:TypeArguments="x:String" x:Key="s_POB">[row.Item("사업장").ToString]</InArgument>
-                                        </ui:InvokeWorkflowFile.Arguments>
-                                      </ui:InvokeWorkflowFile>
+                                      <If Condition="[s_stateofPOB = &quot;사업자 조회정보 없음&quot;]" sap:VirtualizedContainerService.HintSize="623,260" sap2010:WorkflowViewState.IdRef="If_5">
+                                        <If.Then>
+                                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{row.Item(&quot;사업장&quot;).ToString, s_stateofPOB, s_stateofPOB, s_stateofPOB}]" DataTable="[DT_hometaxdata]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+                                        </If.Then>
+                                        <If.Else>
+                                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 사업자전환공통모듈_금액스크래핑 workflow" sap:VirtualizedContainerService.HintSize="378,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_25" UnSafe="False" WorkflowFileName="공통모듈\사업자전환공통모듈_금액스크래핑.xaml">
+                                            <ui:InvokeWorkflowFile.Arguments>
+                                              <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dt_hometaxdata">[dt_hometaxdata]</InOutArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="s_POB">[row.Item("사업장").ToString]</InArgument>
+                                            </ui:InvokeWorkflowFile.Arguments>
+                                          </ui:InvokeWorkflowFile>
+                                        </If.Else>
+                                      </If>
                                     </Sequence>
                                   </Sequence>
                                 </If.Else>
@@ -337,24 +352,25 @@
                 </Catch>
               </TryCatch.Catches>
               <TryCatch.Finally>
-                <Sequence sap:VirtualizedContainerService.HintSize="476,380" sap2010:WorkflowViewState.IdRef="Sequence_90">
+                <Sequence sap:VirtualizedContainerService.HintSize="476,442" sap2010:WorkflowViewState.IdRef="Sequence_90">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_33" InstanceCachePeriod="3000" WorkbookPath="[s_excelfileroot]">
+                  <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,350" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_33" InstanceCachePeriod="3000" WorkbookPath="[s_excelfileroot]">
                     <ui:ExcelApplicationScope.Body>
                       <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                         </ActivityAction.Argument>
-                        <Sequence sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_89">
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,241" sap2010:WorkflowViewState.IdRef="Sequence_89">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
+                          <ui:ExcelDeleteRange DisplayName="Delete Range" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_5" Range="E3:H200" SheetName="국세청 금액" ShiftCells="False" ShiftOption="ShiftUp" />
                           <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_hometaxdata]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_22" SheetName="국세청 금액" StartingCell="E3" />
                         </Sequence>
                       </ActivityAction>
@@ -367,7 +383,7 @@
         </ActivityAction>
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
-    <Sequence sap:VirtualizedContainerService.HintSize="1229,507" sap2010:WorkflowViewState.IdRef="Sequence_78">
+    <Sequence sap:VirtualizedContainerService.HintSize="1100,507" sap2010:WorkflowViewState.IdRef="Sequence_78">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
