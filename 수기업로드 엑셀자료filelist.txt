@@ -1,0 +1,12 @@
+﻿C:\Users\cjswo\OneDrive\문서\UiPath\수기업로드자동화프로젝트_V2\수기업로드 엑셀자료\filelist.txt
+C:\Users\cjswo\OneDrive\문서\UiPath\수기업로드자동화프로젝트_V2\수기업로드 엑셀자료\Sequence.xaml
+C:\Users\cjswo\OneDrive\문서\UiPath\수기업로드자동화프로젝트_V2\수기업로드 엑셀자료\계산서_F100.xls
+C:\Users\cjswo\OneDrive\문서\UiPath\수기업로드자동화프로젝트_V2\수기업로드 엑셀자료\세금계산서_E006.xls
+C:\Users\cjswo\OneDrive\문서\UiPath\수기업로드자동화프로젝트_V2\수기업로드 엑셀자료\세금계산서_E026.xls
+C:\Users\cjswo\OneDrive\문서\UiPath\수기업로드자동화프로젝트_V2\수기업로드 엑셀자료\세금계산서_F100.xls
+C:\Users\cjswo\OneDrive\문서\UiPath\수기업로드자동화프로젝트_V2\수기업로드 엑셀자료\filelist.txt
+C:\Users\cjswo\OneDrive\문서\UiPath\수기업로드자동화프로젝트_V2\수기업로드 엑셀자료\Sequence.xaml
+C:\Users\cjswo\OneDrive\문서\UiPath\수기업로드자동화프로젝트_V2\수기업로드 엑셀자료\계산서_F100.xls
+C:\Users\cjswo\OneDrive\문서\UiPath\수기업로드자동화프로젝트_V2\수기업로드 엑셀자료\세금계산서_E006.xls
+C:\Users\cjswo\OneDrive\문서\UiPath\수기업로드자동화프로젝트_V2\수기업로드 엑셀자료\세금계산서_E026.xls
+C:\Users\cjswo\OneDrive\문서\UiPath\수기업로드자동화프로젝트_V2\수기업로드 엑셀자료\세금계산서_F100.xls
